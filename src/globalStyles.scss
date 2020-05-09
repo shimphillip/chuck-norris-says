@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Unlock');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+:root {
+  --primary-color: #c0392b;
+  --secondary-color: #dab10d;
+  --font-color: #eee;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    font-size: 50%;
+  }
+  @media (max-width: 650px) {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-family: 'Unlock', cursive;
+  height: 100vh;
+  color: var(--font-color);
+  //   background-image: linear-gradient(
+  //       to right bottom,
+  //       rgba(0, 0, 0, 0.6),
+  //       rgba(0, 0, 0, 0.8)
+  //     ),
+  //     url('./../assets/chuck-bg.jpg');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}

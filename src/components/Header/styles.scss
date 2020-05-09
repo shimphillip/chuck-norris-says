@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+  margin-top: 4rem;
+
+  .heading {
+    font-size: 11rem;
+    text-transform: capitalize;
+    display: inline-block;
+    border-bottom: 1rem dashed var(--primary-color);
+    animation: bounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: rotate(1deg);
+
+    @media (max-width: 650px) {
+      padding-bottom: 2rem;
+    }
+
+    &__special {
+      font-size: 12rem;
+      color: var(--secondary-color);
+      text-transform: uppercase;
+      text-shadow: 3px 3px 3px white;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10rem);
+  }
+  70% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0) rotate(1deg);
+  }
+}

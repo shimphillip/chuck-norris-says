@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95baca14-8820-4589-9704-cd96c5f9e2e0/deploy-status)](https://app.netlify.com/sites/chuck-norris-says/deploys)
+
 # Chuck Norris Says
 
 Randomly fetchs a Chuck Norris joke

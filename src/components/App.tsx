@@ -2,7 +2,7 @@ import React from 'react'
 import './App.scss'
 import Header from './Header'
 import QuoteBox from './QuoteBox'
-import InfoBox from './InfoBox'
+import Buttons from './Buttons'
 
 import useFetchQuote from '../hooks/useFetchQuote'
 
@@ -16,18 +16,18 @@ const App = () => {
   } = useFetchQuote()
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <QuoteBox quote={quote} loading={loading} />
-        <InfoBox
+        <Buttons
           quote={quote}
           fetchQuote={fetchQuote}
           isExplicit={isExplicit}
           toggleIsExplicit={toggleIsExplicit}
         />
       </main>
-    </div>
+    </>
   )
 }
 

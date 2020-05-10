@@ -1,3 +1,17 @@
+.info_box {
+  grid-column: 4 / 1 span;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  @media (max-width: 650px) {
+    grid-column: 1 / -1;
+  }
+
+
+}
+
 .btn {
   position: relative;
   display: block;
@@ -45,47 +59,32 @@
     transform: translateX(-110%);
     z-index: -1;
   }
-}
 
-.active {
-  color: var(--secondary-color);
+  &.active {
+    color: var(--secondary-color);
 
-  &::before {
-    transform: translateX(0);
-  }
+    &::before {
+      transform: translateX(0);
+    }
 
-  @media (max-width: 650px) {
-    &:hover {
-      color: var(--secondary-color);
+    @media (max-width: 650px) {
+      &:hover {
+        color: var(--secondary-color);
 
-      &::before {
-        transform: translateX(0);
+        &::before {
+          transform: translateX(0);
+        }
       }
     }
   }
-}
 
-.info_box {
-  grid-column: 4 / 1 span;
-  align-self: start;
-
-  @media (max-width: 650px) {
-    grid-column: 1 / -1;
+  &--new {
+    border: 0.5rem solid var(--font-color);
   }
-
-  .button_box {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem;
-
-    .btn.new {
-      border: 0.5rem solid var(--font-color);
-    }
-    .btn.tumblr {
-      border: 0.5rem solid #2f4155;
-    }
-    .btn.tw {
-      border: 0.5rem solid #1da1f2;
-    }
+  &--tumblr {
+    border: 0.5rem solid #2f4155;
+  }
+  &--tw {
+    border: 0.5rem solid #1da1f2;
   }
 }

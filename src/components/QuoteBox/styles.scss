@@ -1,62 +1,59 @@
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
+.quote-box {
+  @media (max-width: 650px) {
+    grid-column: 1 / -1;
+  }
 
-.quote_box {
-    position: relative;
-    min-height: 30rem;
-    grid-column: 2 / 1 span;
-    padding: 2rem;
-    border: 0.75rem solid var(--primary-color);
-    border-radius: 10px;
+  grid-column: 2 / 1 span;
+  position: relative;
+  height: 44rem;
+  padding: 2rem;
+  border: 0.75rem solid var(--primary-color);
+  border-radius: 10px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  line-height: 1.7;
+  text-shadow: 1px 1px 2px black;
+
+  .quote-mark {
+    color: var(--secondary-color);
+    margin-right: 1rem;
+  }
+
+  .chuck-norris-gif {
+    position: absolute;
+    top: -6rem;
+    left: 45%;
+
+    @media (max-width: 1024px) {
+      top: -55px;
+    }
 
     @media (max-width: 650px) {
-        grid-column: 1 / -1;
+      top: -9rem;
+    }
+  }
+
+  .loader {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation: rotation 10s infinite linear;
+
+    @media (max-width: 1024px) {
+      top: 30%;
     }
 
-    .img_box {
-        position: absolute;
-        top: -6rem;
-        left: 45%;
-
-        @media (max-width: 1024px) {
-            top: -55px;
-        }
-
-        @media (max-width: 650px) {
-            top: -9rem;
-        }
+    @media (max-width: 650px) {
+      top: 6rem;
     }
+  }
+}
 
-    .quote {
-        font-size: 4rem;
-        line-height: 1.7;
-        text-shadow: 1px 1px 2px black;
-        font-family: 'Permanent Marker', cursive;
-
-        .quote_left {
-            color: var(--secondary-color);
-            margin-right: 1rem;
-        }
-    }
-
-    .loader {
-        position: absolute;
-        top: 40%;
-        left: 40%;
-        animation: rotation 10s infinite linear;
-
-        @media (max-width: 1024px) {
-            top: 30%;
-        }
-
-        @media (max-width: 650px) {
-            top: 6rem;
-        }
-    }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

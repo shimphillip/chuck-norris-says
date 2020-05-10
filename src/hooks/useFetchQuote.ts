@@ -19,7 +19,7 @@ const useFetchQuote = () => {
 
   useEffect(() => {
     fetchQuote()
-  }, [isExplicit])
+  }, [])
 
   const fetchQuote = async () => {
     try {

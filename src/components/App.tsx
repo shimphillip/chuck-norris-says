@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <main className="main">
+      <main>
         <QuoteBox quote={quote} loading={loading} />
         <InfoBox
           quote={quote}

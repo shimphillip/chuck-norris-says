@@ -15,16 +15,18 @@ const API = `http://api.icndb.com/jokes/random`
 const useFetchQuote = () => {
   const [quote, setQuote] = useState('')
   const [loading, setLoading] = useState(false)
+  const [isExplicit, setIsExplicit] = useState(true)
 
   useEffect(() => {
     fetchQuote()
-  }, [])
+  }, [isExplicit])
 
   const fetchQuote = async () => {
     try {
       setLoading(true)
-      
-      const response = await fetch(proxy + API)
+
+      const queryString = isExplicit ? '?exclude=[explicit]' : ''
+      const response = await fetch(proxy + API + queryString)
       const data: IQuoteResponse = await response.json()
       const { joke } = data.value
 
@@ -36,7 +38,11 @@ const useFetchQuote = () => {
     }
   }
 
-  return { quote, fetchQuote, loading }
+  const toggleIsExplicit = () => {
+    setIsExplicit(!isExplicit)
+  }
+
+  return { quote, fetchQuote, isExplicit, toggleIsExplicit, loading }
 }
 
 export default useFetchQuote

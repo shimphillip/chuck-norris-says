@@ -16,7 +16,7 @@ const Buttons = ({
   isExplicit,
   toggleIsExplicit,
 }: ButtonsProps) => (
-  <aside className="info_box">
+  <aside className="buttons">
     <button className="btn btn--new" onClick={fetchQuote}>
       New Quote
     </button>
@@ -40,7 +40,7 @@ const Buttons = ({
     </a>
 
     <button
-      className={['btn', isExplicit ? 'btn--active' : ''].join(' ')}
+      className={['btn', isExplicit ? 'btn--active' : ''].join(' ').trim()}
       onClick={toggleIsExplicit}
     >
       {isExplicit ? 'Explicit Content filtered' : 'Filter Explicit Content'}

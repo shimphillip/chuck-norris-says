@@ -16,7 +16,7 @@ const App = () => {
   } = useFetchQuote()
 
   return (
-    <>
+    <div className="app">
       <Header />
       <main>
         <QuoteBox quote={quote} loading={loading} />
@@ -27,7 +27,7 @@ const App = () => {
           toggleIsExplicit={toggleIsExplicit}
         />
       </main>
-    </>
+    </div>
   )
 }
 

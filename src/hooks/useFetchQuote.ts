@@ -21,6 +21,8 @@ const useFetchQuote = () => {
     fetchQuote()
   }, [])
 
+  const transformJoke = (joke: string) => joke.split('&quot;').join('"')
+
   const fetchQuote = async () => {
     try {
       setLoading(true)
@@ -28,7 +30,7 @@ const useFetchQuote = () => {
       const queryString = isExplicit ? '?exclude=[explicit]' : ''
       const response = await fetch(proxy + API + queryString)
       const data: IQuoteResponse = await response.json()
-      const { joke } = data.value
+      const joke = transformJoke(data.value.joke)
 
       setQuote(joke)
       setLoading(false)

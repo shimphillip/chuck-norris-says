@@ -1,4 +1,4 @@
-.info_box {
+.buttons {
   grid-column: 4 / 1 span;
   align-self: start;
   display: flex;
@@ -8,8 +8,6 @@
   @media (max-width: 650px) {
     grid-column: 1 / -1;
   }
-
-
 }
 
 .btn {
@@ -60,7 +58,7 @@
     z-index: -1;
   }
 
-  &.active {
+  &--active {
     color: var(--secondary-color);
 
     &::before {

@@ -12,7 +12,6 @@ interface QuoteBoxProps {
   loading: boolean
 }
 
-// +quot;
 
 const QuoteBox = ({ quote, loading }: QuoteBoxProps) => {
   return (

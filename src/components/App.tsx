@@ -5,6 +5,7 @@ import QuoteBox from './QuoteBox'
 import Buttons from './Buttons'
 
 import useFetchQuote from '../hooks/useFetchQuote'
+import Footer from './Footer'
 
 const App = () => {
   const {
@@ -27,6 +28,7 @@ const App = () => {
           toggleIsExplicit={toggleIsExplicit}
         />
       </main>
+      <Footer />
     </div>
   )
 }
